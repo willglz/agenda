@@ -4,7 +4,7 @@ import java.util.*;
 
 public class ContactDAOImpl implements ContactDAO {
     private static Contact[] contacts;
-    private static final int CAPACITY = 2;
+    private static final int CAPACITY = 10;
 
     static {
         contacts = new Contact[CAPACITY];
@@ -36,7 +36,7 @@ public class ContactDAOImpl implements ContactDAO {
         Contact contactToDelete = findContactById(id);
         if (contactToDelete != null){
             for (int i = 0; i < contacts.length; i++) {
-                if (Objects.equals(contacts[i].getId(), id)){
+                if (contacts[i] != null && Objects.equals(contacts[i].getId(), id)){
                     contacts[i] = null;
                     return "Contact with id " + id + " has been successfully deleted";
                 }
@@ -55,7 +55,7 @@ public class ContactDAOImpl implements ContactDAO {
     public Contact[] findContactByName(String name) {
         Contact[] contactByName = new Contact[CAPACITY];
         for (int i = 0; i < contacts.length; i++) {
-            if (contacts[i] != null && contacts[i].getName().equals(name)){
+            if (contacts[i] != null && contacts[i].getName().equalsIgnoreCase(name)){
                 contactByName[i] = contacts[i];
             }
         }
@@ -72,7 +72,7 @@ public class ContactDAOImpl implements ContactDAO {
     public Contact findContactById(Integer id) {
         Contact contact;
         for (Contact c : contacts) {
-            if (Objects.equals(c.getId(), id)){
+            if (c != null && Objects.equals(c.getId(), id)){
                 contact = c;
                 return contact;
             }
@@ -93,5 +93,14 @@ public class ContactDAOImpl implements ContactDAO {
                 }
             }
         }
+    }
+
+    public boolean verifyName(String name){
+        for (Contact c : contacts) {
+            if (c != null && c.getName().equals(name)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

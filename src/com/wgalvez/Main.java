@@ -25,13 +25,28 @@ public class Main {
             switch (opt){
                 case "1":
                     Contact contact = new Contact();
-                    System.out.println("Enter the contact name: ");
-                    String name = sc.next();
-                    System.out.println("Enter the contact phone number: ");
-                    String phone = sc.next();
-                    contact.setName(name);
-                    contact.setPhone(phone);
-                    System.out.println(service.addContact(contact));
+                    boolean stat = true;
+                    while (stat){
+                        System.out.println("Enter the contact name: ");
+                        String name = sc.next();
+                        System.out.println("Enter the contact phone number: ");
+                        String phone = sc.next();
+                        if (service.checkName(name)){
+                            System.out.println("'" + name + "' already exist in your agenda, do you want to continue? (y/n)");
+                            String choice = sc.next();
+                            if (choice.equalsIgnoreCase("y")){
+                                contact.setName(name);
+                                contact.setPhone(phone);
+                                System.out.println(service.addContact(contact));
+                                stat = false;
+                            }
+                        }else {
+                            contact.setName(name);
+                            contact.setPhone(phone);
+                            System.out.println(service.addContact(contact));
+                            stat = false;
+                        }
+                    }
                     break;
                 case "2":
                     System.out.println("Enter the contact name to find: ");

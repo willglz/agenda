@@ -8,6 +8,9 @@ public class ContactService {
     }
 
     public String addContact(Contact contact){
+        if (contact.getName().isBlank() || contact.getPhone().isBlank()){
+            return "Name or Phone cannot be null";
+        }
         return contactDAO.saveContact(contact);
     }
 
@@ -32,5 +35,9 @@ public class ContactService {
     }
     public String deleteContact(Integer id){
         return contactDAO.deleteContact(id);
+    }
+
+    public boolean checkName(String name){
+        return contactDAO.verifyName(name);
     }
 }
