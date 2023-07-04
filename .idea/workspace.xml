@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wgalvez/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wgalvez/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/wgalvez/model/ContactDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wgalvez/model/ContactDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wgalvez/model/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wgalvez/model/ContactService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
       <updated>1688438706409</updated>
       <workItem from="1688438707772" duration="2000" />
       <workItem from="1688480942241" duration="13542000" />
-      <workItem from="1688497833654" duration="6985000" />
+      <workItem from="1688497833654" duration="9178000" />
     </task>
     <servers />
   </component>

@@ -15,7 +15,8 @@ public class ContactDAOImpl implements ContactDAO {
             if (contacts[i] == null){
                 contacts[i] = contact;
                 System.out.println("Contact saved.");
-                return contact.toString();
+                return "\nName: " + contact.getName() +
+                        "\nPhone number: " + contact.getPhone();
             }
         }
         return "Sorry, your agenda is currently full.";
