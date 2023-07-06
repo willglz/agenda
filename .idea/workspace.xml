@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18c83f15-8777-45fc-8ed9-6cd295781c5b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/wgalvez/utils/StringValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wgalvez/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wgalvez/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/wgalvez/model/ContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/wgalvez/model/ContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +62,7 @@
       <workItem from="1688438707772" duration="2000" />
       <workItem from="1688480942241" duration="13542000" />
       <workItem from="1688497833654" duration="9654000" />
-      <workItem from="1688665379169" duration="4124000" />
+      <workItem from="1688665379169" duration="4422000" />
     </task>
     <servers />
   </component>
