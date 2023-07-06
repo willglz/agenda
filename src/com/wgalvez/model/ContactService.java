@@ -8,9 +8,6 @@ public class ContactService {
     }
 
     public String addContact(Contact contact){
-        if (contact.getName().isBlank() || contact.getPhone().isBlank()){
-            return "Name or Phone cannot be null";
-        }
         return contactDAO.saveContact(contact);
     }
 
